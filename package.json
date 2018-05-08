@@ -1,12 +1,13 @@
 {
-  "name": "pwa-starter-kit",
-  "version": "0.8.0",
+  "name": "research-demos",
+  "version": "1.0.0",
   "flat": true,
   "contributors": [
-    "The Polymer Authors"
+    "Steven Ottens",
+    "Tom van Tilburg"
   ],
   "license": "BSD-3-Clause",
-  "repository": "Polymer/pwa-starter-kit",
+  "repository": "Geodan/research-demos",
   "scripts": {
     "start": "polymer serve",
     "build": "npm run build:prpl-server && npm run build:static",
@@ -21,7 +22,11 @@
   },
   "dependencies": {
     "@polymer/app-layout": "^3.0.0-pre.15",
+    "@polymer/iron-ajax": "^3.0.0-pre.15",
+    "@polymer/iron-flex-layout": "^3.0.0-pre.17",
     "@polymer/lit-element": "^0.5.0",
+    "@polymer/paper-card": "^3.0.0-pre.17",
+    "@polymer/paper-item": "^3.0.0-pre.17",
     "@webcomponents/webcomponentsjs": "^2.0.0-beta.2",
     "pwa-helpers": "Polymer/pwa-helpers",
     "redux": "^3.7.2",

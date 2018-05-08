@@ -1,8 +1,10 @@
 {
   "entrypoint": "index.html",
-  "shell": "src/components/my-app.js",
+  "shell": "src/components/research-demos.js",
   "sources": [
-    "images/**/*"
+    "images/**/*",
+    "thumbnails/**/*",
+    "config/**/*"
   ],
   "extraDependencies": [
     "manifest.json",
