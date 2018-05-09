@@ -5,7 +5,8 @@
     "tags":["Camera","FOV"],
     "thumbnail":"thumbnails/cameras.gif",
     "description":"Camera Field Of View",
-    "date":"november 2017"
+    "date":"november 2017",
+    "disabled":true
 },
 {
     "url":"http://research.geodan.nl/sites/ndw_viewer/",
@@ -17,7 +18,7 @@
 },
 {
     "url":"http://research.geodan.nl/sites/360Viewer/",
-    "title":"360 degree interactive content viewer for video, photo and streams",
+    "title":"360 degree viewer",
     "tags":["Unity","3D", "360 degree","Photo","Streams", "Video", "Upload"],
     "thumbnail":"thumbnails/360viewer.gif",
     "description":"360 degree interactive content viewer for video, photo and streams",
@@ -25,7 +26,7 @@
 },
 {
     "url":"http://research.geodan.nl/sites/unity-cntk-azure/",
-    "title":"Real-Time AI on 3D geodata with Unity, CNTK and Azure",
+    "title":"Real-Time AI",
     "tags":["Unity","3D", "CNTK", "AI","Machine Learning"],
     "thumbnail":"thumbnails/unitycntkazure.gif",
     "description":"Real-Time AI on 3D geodata with Unity, CNTK and Azure",
@@ -33,7 +34,7 @@
 },
 {
     "url":"https://youtu.be/COC0uGffbnE",
-    "title":"360 degree 3D video of Leeuwarden for AR/VR using BGT, GKN, AHN3 data",
+    "title":"360 degree Leeuwarden",
     "tags":["Unity","3D", "Video", "Youtube","AR","VR","Geomagine","360 degree"],
     "thumbnail":"thumbnails/geomagine_leeuwarden.gif",
     "description":"360 degree 3D video of Leeuwarden for AR/VR using BGT, Geodan GKN, AHN3 data",
@@ -41,7 +42,7 @@
 },
 {
     "url":"https://youtu.be/NeXA7wOpZLE",
-    "title":"Finch: Indoor Navigation for visually impaired with Google Tango",
+    "title":"Indoor navigation",
     "tags":["Unity","3D", "Pointcloud", "Indoor Navigation","3D Audio Navigation", "Tactile Navigation", "SLAM", "Google Tango"],
     "thumbnail":"thumbnails/finch.gif",
     "description":"Finch: Indoor Navigation for visually impaired with Google Tango",
@@ -49,7 +50,7 @@
 },
 {
     "url":"http://saturnus.geodan.nl/frans/bro/lekdijk_geotop.xhtml",
-    "title":"Basisregistratie Ondergrond in 3D",
+    "title":"BRO in 3D",
     "tags":["BRO","X3D"],
     "thumbnail":"thumbnails/bro_x3dom.gif",
     "description":"Basisregistratie Ondergrond in 3D",
@@ -60,8 +61,8 @@
     "tags":["vector tiles","mapbox", "vector", "tiles", "storymap", "story", "map"],
     "thumbnail":"thumbnails/mbstorymap.gif",
     "description":"Story map explaining some virtues of vector tiles",
-    "date":"june 22 2017"
-
+    "date":"june 22 2017",
+    "disabled":true
 },
 {
     "url":"http://research.geodan.nl/sites/demos/geodangebouw_bgt/",
@@ -69,11 +70,12 @@
     "tags":["BIM","X3D"],
     "thumbnail":"thumbnails/geodangebouw.gif",
     "description":"Geodan building based on BIM model represented in X3D",
-    "date":"march 2017"
+    "date":"march 2017",
+    "disabled":true
 },
 {
     "url":"http://research.geodan.nl/sites/GeodanAI/CrowdSim/",
-    "title":"Geocraft with basic Crowd Simulation",
+    "title":"Geocraft with Crowd Simulation",
     "tags":["geocraft", "Microsoft", "AI", "3D", "voxel", "unity", "agent", "minecraft", "amsterdam", "WebGL", "Crowd", "Simulation"],
     "thumbnail":"thumbnails/crowdsim.gif",
     "description":"Geocraft model with basic Crowd Simulation",
@@ -147,7 +149,8 @@
     "thumbnail":"thumbnails/provincies-data.png",
     "tags":["data","D3","Ol 3"],
     "date":"April 2016",
-    "description":"An webapp using D3 and Open Layers 3 to show data on the map."
+    "description":"An webapp using D3 and Open Layers 3 to show data on the map.",
+    "disabled":true
 },
 {
     "url":"http://research.geodan.nl/sites/bag-tiles",

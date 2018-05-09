@@ -29,10 +29,10 @@ import { connect } from 'pwa-helpers/connect-mixin.js';
 import { updateMetadata } from 'pwa-helpers/metadata.js';
 
 import { store } from '../store.js';
-import { navigate, updateDrawerState, updateLayout } from '../actions/app.js';
+import { navigate, updateLayout } from '../actions/app.js';
 
 class ResearchDemos extends connect(store)(LitElement) {
-  _render({appTitle, _drawerOpened}) {
+  _render({resultaat, appTitle}) {
     // Anything that's related to rendering should be done in here.
     return html`
     <style is="custom-style">
@@ -277,42 +277,21 @@ class ResearchDemos extends connect(store)(LitElement) {
             padding: 5px;
             transform: rotateY( 180deg );
         }
-
-
+        
       }
     </style>
     
     <app-header condenses reveals effects="waterfall">
       <app-toolbar class="toolbar-top">
-        <button class="menu-btn" title="Menu" on-click="${_ => store.dispatch(updateDrawerState(true))}">${menuIcon}</button>
-        <a href="https://www.geodan.nl"><img src="../images/Geodan_logo_rgb.png" height="80px"></a>
+        <a href="https://www.geodan.nl"><img src="images/Geodan_logo_rgb.png" height="80px"></a>
         <div main-title>${appTitle}</div>
       </app-toolbar>
     </app-header>
-
-    <!-- Drawer content -->
-    <app-drawer opened="${_drawerOpened}"
-        on-opened-changed="${e => store.dispatch(updateDrawerState(e.target.opened))}">
-      <nav class="drawer-list">
-        ${repeat(this.resultaat || [], (demo) => demo.title, (demo, index) => html`
-        <a href="${demo.url}">
-                    <paper-item class="tag">
-                        <paper-item-body two-line>
-                            <div class="demoname">${demo.title}</div>
-                            <div secondary>
-                                <strong>tags:</strong> ${demo.tags.join(' ')}
-                            </div>
-                        </paper-item-body>
-                    </paper-item>
-                </a>
-      `)};
-      </nav>
-    </app-drawer>
-
-    <!-- Main content -->
+  
     <main class="main-content">
       <div class='layout horizontal start-justified wrap'>
-      ${repeat(this.resultaat || [], (demo) => demo.title, (demo, index) => html`
+
+      ${repeat(resultaat || [], (demo) => demo.title, (demo, index) => html`
               <a class="demo" href="${demo.url}" style="display:${demo.disabled?"none":"inline-block"}">
               <div class="papercard"
                   heading="" 
@@ -325,7 +304,7 @@ class ResearchDemos extends connect(store)(LitElement) {
                               <img src="${demo.thumbnail}"/>
                           `}
                           <div>${demo.title}</div>
-                          <div class="date">${demo.date}</div>
+                          <div class="date"><small><i>${demo.date}</i></small></div>
                       </div>
                       <div class="backside">
                           ${demo.description}
@@ -339,14 +318,15 @@ class ResearchDemos extends connect(store)(LitElement) {
       </div>
       
     </main>
-
+    </app-drawer-layout>
+    
     <footer>
       <p>Geodan research 2018</p>
     </footer>
 
     <iron-ajax id="getConfig" 
       auto="" 
-      url="../config/config.json" 
+      url="config/config.json" 
       handle-as="json" 
       on-response="${(e)=>this.handleResponse(e)}"
       withcredentials="true"></iron-ajax>
@@ -360,7 +340,8 @@ static get properties() {
     _drawerOpened: {
       type: Boolean,
       value: true
-    }
+    },
+    resultaat: Array
   }
 }
 
@@ -370,9 +351,8 @@ constructor() {
   // See https://www.polymer-project.org/2.0/docs/devguide/gesture-events#use-passive-gesture-listeners
   setPassiveTouchGestures(true);
 }
+_stateChanged(){
 
-_stateChanged(state) {
-  this._drawerOpened = state.app.drawerOpened;
 }
 handleResponse(d) {
     var taglist ={};        
