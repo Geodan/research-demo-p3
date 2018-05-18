@@ -119,7 +119,8 @@
     "tags":["dashboards", "sensoren", "iot", "polymer","d3","gost"],
     "thumbnail":"thumbnails/dashboard.png",
     "description":"Interactive dashboard showing data being collected by GOST.",
-    "date":"oktober 2016"
+    "date":"oktober 2016",
+    "disabled":true
 },{
     "url":"http://research.geodan.nl/sites/gmiddag_dash",
     "title":"Geodanmiddag Dashboard",
@@ -158,7 +159,8 @@
     "tags":["vector tiles","mapboxgl","bag","html5","clustering"],
     "thumbnail":"thumbnails/bagtiles.gif",
     "description":"A viewer which shows the rendering speeds of vector-tiles with serverside clustering of 11 million buildings",
-    "date":"may 2015"
+    "date":"may 2015",
+    "disabled": true
 },  {
     "url":"http://research.geodan.nl/sites/buurten",
     "title":"CBS Vector Tiles",
@@ -226,7 +228,8 @@
 	"thumbnail":"./thumbnails/natuurbrand.gif",
 	"tags": ["natuubrand", "geoext", "model"],
 	"date":"august 2014",
-	"description":"Interface to a forestfire model, used by firefighters ✋ AUTHORISED ONLY! ✋"
+    "description":"Interface to a forestfire model, used by firefighters ✋ AUTHORISED ONLY! ✋",
+    "disabled": true
 },                                             
 {
 	"title": "Dynamic Holland Shading",
@@ -251,7 +254,8 @@
     "tags":["d3","animation","energy","html5"],
     "thumbnail":"thumbnails/cerise.gif",
     "description":"Showing the per-hour energy use with the help of linked data, D3 and crossfilter", 
-    "date":"2014"
+    "date":"2014",
+    "disabled":true
 },  
 {
 	"title": "FalconViewer",
@@ -267,7 +271,8 @@
     "thumbnail":"thumbnails/cow.gif",
     "tags":["websockets","instant","communication","html5","crisis management"],
     "date":"november 2013",
-    "description":"COW allows for instant communication through different networks by utilizing secure websockets to share location, extent, features and texts. It is used in ICM-water"
+    "description":"COW allows for instant communication through different networks by utilizing secure websockets to share location, extent, features and texts. It is used in ICM-water",
+    "disabled":true
 },   
 {
 	"title": "Rochelroutes",
